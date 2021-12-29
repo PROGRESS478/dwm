@@ -18,7 +18,7 @@ static const int extrabar           = 0;        /* 0 means no extra bar */
 static const char statussep         = ';';      /* separator between statuses */
 static const char *fonts[]          = { "fontawesome:pixelsize=13", "Symbols Nerd Font:pixelsize=14" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char buttonbar[]       = "<O>";
+static const char buttonbar[]       = "";
 
 //inactive desktop
 static const char inactive_desktop1[]= "#001319";
@@ -172,7 +172,7 @@ static Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkButton,		0,		Button1,	spawn,		{.v = dmenucmd } },
+	{ ClkButton,		    0,		        Button1,	    spawn,		    {.v = termcmd } },
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
